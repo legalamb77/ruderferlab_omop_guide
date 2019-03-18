@@ -4,9 +4,9 @@ create external table phecode_ancestors (
  CHILD_PHECODE varchar(100)
  )
 USING (
-  DATAOBJECT('/Users/tjm/Desktop/trainwreck_adjusted/ancestor_child_phecodes.csv')
+  DATAOBJECT('/path/to/your/file')
   REMOTESOURCE 'jdbc'
   DELIMITER ','
   SKIPROWS 1
   MAXERRORS 1000
-  LOGDIR '/Users/tjm/Documents/' )
+  LOGDIR '/path/to/error/dir' )
