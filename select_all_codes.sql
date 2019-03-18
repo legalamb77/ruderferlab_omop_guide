@@ -1,4 +1,4 @@
-#Select all codes (CPT and ICD) split across tables in OMOP database -- join on v_concept in order to get access to legacy code naming
+#Select all codes (CPT and ICD) split across tables in OMOP database -- join on v_concept in order to get access to legacy code naming.
 
 
 select  count(*)
@@ -18,4 +18,4 @@ union   select  person_id,
         procedure_source_concept_id as source_concept_id,
         procedure_date as start_date from v_procedure_occurrence
 )
-as all_codes inner join v_concept on source_concept_id=concept_id
+as all_codes inner join v_concept on source_concept_id=concept_id;
